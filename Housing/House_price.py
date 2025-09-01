@@ -14,7 +14,7 @@ MedInc=st.number_input("Median income in block group",0,10,5)
 HouseAge=st.number_input("Enter house age",0,200)
 AveRooms=st.number_input("Enter number of rooms",0,200)
 AveBedrms=st.number_input("Enter number of bedrooms",0,200)
-Population = st.number_input("Enter block group population",0,200)
+Population = st.number_input("Enter block group population",0,50000)
 AveOccup = st.number_input("Enter number of household members",0,200)
 Latitude = st.slider('Select latitude:', 30, 50, 1)
 Longitude = st.slider('Select longitude:', 100, 130, 1)
@@ -34,6 +34,7 @@ if predict_clicked==True:
     st.success('The predicted price is ${}'.format(result))
     #display the predicted price on the webpage
     
+
 
 
 
