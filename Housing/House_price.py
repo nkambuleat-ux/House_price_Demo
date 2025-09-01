@@ -24,7 +24,7 @@ Longitude = st.slider('Select longitude:', 100, 130, 1)
 predict_clicked=st.button("Get the prediction")
 
 if predict_clicked==True:
-    model=pickle.load(open("C:/Users/nkamb/VS code/Housing/model.pkl", 'rb'))
+    model=pickle.load(open("Housing/model.pkl", 'rb'))
 
     #load the test data into numpy array
     data=[np.array(['MedInc', 'HouseAge', 'AveRooms', 'AveBedrms', 'Population', 'AveOccup', 'Latitude', 'Longitude'])]
@@ -34,6 +34,7 @@ if predict_clicked==True:
     st.success('The predicted price is ${}'.format(result))
     #display the predicted price on the webpage
     
+
 
 
 
