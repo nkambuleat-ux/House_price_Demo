@@ -27,14 +27,12 @@ if predict_clicked==True:
     model=pickle.load(open("Housing/model.pkl", 'rb'))
 
     #load the test data into numpy array
-    data=[np.array(['MedInc', 'HouseAge', 'AveRooms', 'AveBedrms', 'Population', 'AveOccup', 'Latitude', 'Longitude'])]
+    data=[np.array([['MedInc', 'HouseAge', 'AveRooms', 'AveBedrms', 'Population', 'AveOccup', 'Latitude', 'Longitude']])]
 
     #call the model to predict the price
     result=model.predict(data)
-    st.success('The predicted price is ${}'.format(result))
+    st.success('The predicted price is ${result[0]:,.2f}')
     #display the predicted price on the webpage
-    
-
 
 
 
